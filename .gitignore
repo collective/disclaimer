@@ -23,4 +23,3 @@ parts/
 src/collective.*
 src/plone.*
 var/
-src/collective/disclaimer/browser/static/*
