@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from collective.disclaimer.config import PROJECTNAME
 from collective.disclaimer.interfaces import IDisclaimerSettings
 from collective.disclaimer.testing import INTEGRATION_TESTING
+from collective.disclaimer.testing import QIBBB
 from plone import api
 from plone.app.testing import logout
 from plone.registry.interfaces import IRegistry
@@ -10,7 +10,7 @@ from zope.component import getUtility
 import unittest
 
 
-class ControlPanelTestCase(unittest.TestCase):
+class ControlPanelTestCase(unittest.TestCase, QIBBB):
 
     layer = INTEGRATION_TESTING
 
@@ -37,22 +37,20 @@ class ControlPanelTestCase(unittest.TestCase):
         self.assertIn('disclaimer', actions)
 
     def test_controlpanel_removed_on_uninstall(self):
-        qi = self.portal['portal_quickinstaller']
-
-        with api.env.adopt_roles(['Manager']):
-            qi.uninstallProducts(products=[PROJECTNAME])
+        self.uninstall()  # BBB: QI compatibility
 
         actions = [
             a.getAction(self)['id'] for a in self.controlpanel.listActions()]
         self.assertNotIn('disclaimer', actions)
 
 
-class RegistryTestCase(unittest.TestCase):
+class RegistryTestCase(unittest.TestCase, QIBBB):
 
     layer = INTEGRATION_TESTING
 
     def setUp(self):
         self.portal = self.layer['portal']
+        self.request = self.layer['request']
         self.registry = getUtility(IRegistry)
         self.settings = self.registry.forInterface(IDisclaimerSettings)  # noqa: E501, P001
 
@@ -73,9 +71,7 @@ class RegistryTestCase(unittest.TestCase):
         self.assertIsNone(self.settings.last_modified)
 
     def test_records_removed_on_uninstall(self):
-        qi = self.portal['portal_quickinstaller']
-        with api.env.adopt_roles(['Manager']):
-            qi.uninstallProducts(products=[PROJECTNAME])
+        self.uninstall()  # BBB: QI compatibility
 
         records = (
             IDisclaimerSettings.__identifier__ + '.enabled',

@@ -13,6 +13,23 @@ from plone.testing import z2
 
 
 IS_PLONE_5 = api.env.plone_version().startswith('5')
+IS_BBB = api.env.plone_version().startswith('4.3')
+
+
+class QIBBB:
+    """BBB: remove on deprecation of Plone 4.3."""
+    def uninstall(self):
+        from collective.disclaimer.config import PROJECTNAME
+        if IS_BBB:
+            qi = self.portal['portal_quickinstaller']
+            with api.env.adopt_roles(['Manager']):
+                qi.uninstallProducts([PROJECTNAME])
+        else:
+            from Products.CMFPlone.utils import get_installer
+            qi = get_installer(self.portal, self.request)
+            with api.env.adopt_roles(['Manager']):
+                qi.uninstall_product(PROJECTNAME)
+        return qi
 
 
 class Fixture(PloneSandboxLayer):
