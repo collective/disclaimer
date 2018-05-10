@@ -52,7 +52,7 @@ After updating the configuration you need to run ''bin/buildout'', which will ta
 
 Go to the 'Site Setup' page in a Plone site and click on the 'Add-ons' link.
 
-Check the box next to 'Rich Link Preview' and click the 'Activate' button.
+Check the box next to 'Disclaimer' and click the 'Activate' button.
 
 Usage
 -----
