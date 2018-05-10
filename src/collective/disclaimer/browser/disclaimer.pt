@@ -1,7 +1,7 @@
 <div id="viewlet-disclaimer" role="alert"
     tal:attributes="data-enabled view/enabled;
                     data-last-modified view/last_modified">
-  <style scoped>
+  <style>
     #viewlet-disclaimer {
       background: #ddd;
       bottom: 0;
@@ -30,7 +30,7 @@
   </div>
 </div>
 <script>
-if (Storage !== "undefined") {
+if (Storage !== undefined) {
   $(document).ready(function () {
     "use strict";
     var last_modified = $("#viewlet-disclaimer").attr("data-last-modified");
@@ -44,7 +44,7 @@ if (Storage !== "undefined") {
         $("#viewlet-disclaimer").show();
       }
 
-      $("#viewlet-disclaimer a").click(function (event) {
+      $(".disclaimer-close").click(function (event) {
         event.preventDefault();
         $("#viewlet-disclaimer").hide();
       });
