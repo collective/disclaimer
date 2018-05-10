@@ -4,7 +4,7 @@ from zope.interface import implementer
 
 
 @implementer(INonInstallable)
-class HiddenProfiles(object):
+class HiddenProfiles(object):  # pragma: no cover
 
     def getNonInstallableProfiles(self):
         """Return a list of non-installable profiles."""
