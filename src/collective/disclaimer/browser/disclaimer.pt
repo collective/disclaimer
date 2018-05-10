@@ -14,7 +14,8 @@
       padding: 1em 2em 1em 1em;
       position: fixed;
       vertical-align: baseline;
-      box-sizing: content-box;
+      box-sizing: border-box;
+      width: 100%;
       z-index: 20180509;
     }
     .disclaimer-close {
@@ -27,7 +28,7 @@
       font-weight: bold;
       margin-bottom: 0.5em;
     }
-    #viewlet-disclaimer a:link {
+    #viewlet-disclaimer p a:link {
       color: #fff;
       text-decoration: underline;
     }
