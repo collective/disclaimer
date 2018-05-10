@@ -1,0 +1,29 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.disclaimer">
+
+  <browser:resourceDirectory
+      directory="static"
+      layer="collective.disclaimer.interfaces.IBrowserLayer"
+      name="collective.disclaimer"
+      />
+
+  <browser:page
+      class=".controlpanel.DisclaimerSettingsControlPanel"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      layer="collective.disclaimer.interfaces.IBrowserLayer"
+      name="disclaimer-settings"
+      permission="collective.disclaimer.Setup"
+      />
+
+  <browser:viewlet
+      name="collective.disclaimer"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".DisclaimerViewlet"
+      template="disclaimer.pt"
+      permission="zope2.View"
+      layer="collective.disclaimer.interfaces.IBrowserLayer"
+      />
+
+</configure>

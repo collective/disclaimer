@@ -1,0 +1,68 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2018-05-09 22:16+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: collective/disclaimer/interfaces.py:13
+msgid "<p>We use cookies for statistical purposes, to make the ads you see more relevant to you, to help you sign up for our services, or to remember your settings. Check our <a>privacy and cookies policy</a>.</p>"
+msgstr ""
+
+#: collective/disclaimer/browser/controlpanel.py:11
+#: collective/disclaimer/profiles.zcml:14
+#: collective/disclaimer/profiles/default/controlpanel.xml
+msgid "Disclaimer"
+msgstr ""
+
+#: collective/disclaimer/browser/controlpanel.py:12
+#: collective/disclaimer/profiles.zcml:14
+msgid "Show a disclaimer the first time a user visits a site."
+msgstr ""
+
+#: collective/disclaimer/interfaces.py:42
+msgid "Use of cookies"
+msgstr ""
+
+#: collective/disclaimer/profiles.zcml:21
+msgid "collective.disclaimer: uninstall"
+msgstr ""
+
+#. Default: "If selected, a disclaimer will be shown the first time a user visits the site."
+#: collective/disclaimer/interfaces.py:30
+msgid "help_enabled"
+msgstr ""
+
+#. Default: "The text of the disclaimer."
+#: collective/disclaimer/interfaces.py:51
+msgid "help_text"
+msgstr ""
+
+#. Default: "A title for the disclaimer."
+#: collective/disclaimer/interfaces.py:38
+msgid "help_title"
+msgstr ""
+
+#. Default: "Enable disclaimer?"
+#: collective/disclaimer/interfaces.py:29
+msgid "title_enabled"
+msgstr ""
+
+#. Default: "Body text"
+#: collective/disclaimer/interfaces.py:50
+msgid "title_text"
+msgstr ""
+
+#. Default: "Title"
+#: collective/disclaimer/interfaces.py:37
+msgid "title_title"
+msgstr ""

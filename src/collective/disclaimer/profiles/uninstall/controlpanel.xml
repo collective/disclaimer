@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object name="portal_controlpanel" purge="False">
+  <configlet title="Disclaimer"
+      action_id="disclaimer"
+      appId="collective.disclaimer"
+      category="Products"
+      remove="true"
+      />
+</object>

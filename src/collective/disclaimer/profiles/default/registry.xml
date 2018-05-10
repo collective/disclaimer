@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<registry>
+  <records interface="collective.disclaimer.interfaces.IDisclaimerSettings">
+    <value key="enabled">False</value>
+    <value key="title"></value>
+    <value key="text"></value>
+    <value key="last_modified"></value>
+  </records>
+</registry>

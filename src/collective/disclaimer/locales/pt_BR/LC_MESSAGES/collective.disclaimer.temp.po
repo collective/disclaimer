@@ -1,0 +1,73 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"PO-Revision-Date: 2018-05-08 18:23-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+"Language: pt_BR\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: collective/disclaimer/browser/controlpanel.py:11
+#: collective/disclaimer/profiles.zcml:14
+#: collective/disclaimer/profiles/default/controlpanel.xml
+msgid "Disclaimer"
+msgstr "Aviso"
+
+#: collective/disclaimer/browser/controlpanel.py:12
+#: collective/disclaimer/profiles.zcml:14
+msgid "Show a disclaimer the first time a user visits a site."
+msgstr "Mostra um aviso a primeira vez que um usuário visita o site."
+
+#: collective/disclaimer/profiles.zcml:21
+msgid "collective.disclaimer: uninstall"
+msgstr "collective.disclaimer: uninstall"
+
+#. Default: "Use of cookies"
+#: collective/disclaimer/interfaces.py:35
+msgid "default_title"
+msgstr "Uso de cookies"
+
+#. Default: "If selected, a disclaimer will be shown the first time a user visits the site."
+#: collective/disclaimer/interfaces.py:25
+msgid "help_enabled"
+msgstr "Caso esta opção esteja habilitada, um aviso será mostrado a primeira vez que um usuário visita o site."
+
+#. Default: "The text of the disclaimer."
+#: collective/disclaimer/interfaces.py:44
+msgid "help_text"
+msgstr "O texto do aviso."
+
+#. Default: "A title for the disclaimer."
+#: collective/disclaimer/interfaces.py:33
+msgid "help_title"
+msgstr "O título do aviso."
+
+#. Default: "Enable disclaimer?"
+#: collective/disclaimer/interfaces.py:24
+msgid "title_enabled"
+msgstr "Habilitar aviso?"
+
+#. Default: "Last modified"
+#: collective/disclaimer/interfaces.py:53
+msgid "title_last_modified"
+msgstr "Última modificação"
+
+#. Default: "Body text"
+#: collective/disclaimer/interfaces.py:43
+msgid "title_text"
+msgstr "Corpo do texto"
+
+#. Default: "Title"
+#: collective/disclaimer/interfaces.py:32
+msgid "title_title"
+msgstr "Título"
+
