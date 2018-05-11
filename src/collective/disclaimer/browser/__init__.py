@@ -9,6 +9,7 @@ class DisclaimerViewlet(ViewletBase):
     """The disclaimer viewlet."""
 
     def update(self):
+        super(DisclaimerViewlet, self).update()
         registry = getUtility(IRegistry)
         self.settings = registry.forInterface(IDisclaimerSettings)  # noqa: P001
 

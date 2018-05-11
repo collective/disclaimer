@@ -1,34 +1,16 @@
-<div id="viewlet-disclaimer" role="alert"
+<link href="disclaimer.css" rel="stylesheet"
+    tal:attributes="href string:${view/site_url}/++resource++collective.disclaimer/disclaimer.css">
+
+<div id="viewlet-disclaimer" role="alert" style="display: none"
     tal:attributes="data-enabled view/enabled;
                     data-last-modified view/last_modified">
-  <style>
-    #viewlet-disclaimer {
-      background: #ddd;
-      bottom: 0;
-      display: none;
-      margin: 0 auto;
-      padding: 1em;
-      position: fixed;
-      vertical-align: baseline;
-      width: 100%;
-      z-index: 20180509;
-    }
-    .disclaimer-close {
-      cursor: pointer;
-      float: right;
-      padding-right: 2em;
-      position: relative;
-    }
-    .disclaimer-title {
-      font-weight: bold;
-    }
-  </style>
   <a class="disclaimer-close" title="Close">X</a>
   <div class="disclaimer-title" tal:content="view/title">Title</div>
   <div tal:replace="structure view/text">
     Disclaimer
   </div>
 </div>
+
 <script>
 if (Storage !== undefined) {
   $(document).ready(function () {

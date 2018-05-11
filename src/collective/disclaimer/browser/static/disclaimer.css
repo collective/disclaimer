@@ -1,0 +1,46 @@
+#viewlet-disclaimer {
+    background: #000;
+    bottom: 0;
+    box-sizing: border-box;
+    color: #fff;
+    left: 0;
+    margin: 0 auto;
+    opacity: .92;
+    padding: 1em 2em 1em 1em;
+    position: fixed;
+    right: 0;
+    text-align: left;
+    vertical-align: baseline;
+    width: 100%;
+    z-index: 20180509;
+}
+a.disclaimer-close, a.disclaimer-close:hover {
+    background: #fff;
+    border-radius: 50%;
+    color: #000 !important;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    font-size: 13px;
+    line-height: 18px;
+    height: 17px;
+    position: absolute;
+    right: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    top: 0.5em;
+    width: 17px;
+}
+.disclaimer-title {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+#viewlet-disclaimer p {
+    border-bottom: 0;
+    padding-bottom: 0;
+    text-align: left;
+}
+#viewlet-disclaimer p a:link {
+    color: #fff;
+    text-decoration: underline;
+}
