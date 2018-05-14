@@ -60,7 +60,7 @@ Usage
 After installing the package,
 go to the 'Disclaimer' configlet on 'Site Setup' and enable the feature.
 
-.. figure:: https://raw.github.com/collective/disclaimer/master/configlet.png
+.. figure:: https://raw.githubusercontent.com/collective/disclaimer/master/docs/configlet.png
     :align: center
     :height: 900px
     :width: 800px
@@ -69,7 +69,7 @@ go to the 'Disclaimer' configlet on 'Site Setup' and enable the feature.
 
 Now, the first time a user visits the site the disclaimer will be shown at the bottom of the page.
 
-.. figure:: https://raw.github.com/collective/disclaimer/master/viewlet.png
+.. figure:: https://raw.githubusercontent.com/collective/disclaimer/master/docs/viewlet.png
     :align: center
     :height: 600px
     :width: 800px
