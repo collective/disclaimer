@@ -3,6 +3,7 @@
 
 For Plone 5 we need to install plone.app.contenttypes.
 """
+from collective.disclaimer.config import IS_BBB
 from plone import api
 from plone.app.contenttypes.testing import PLONE_APP_CONTENTTYPES_FIXTURE as PLONE_FIXTURE  # noqa: E501
 from plone.app.robotframework.testing import AUTOLOGIN_LIBRARY_FIXTURE
@@ -10,10 +11,6 @@ from plone.app.testing import FunctionalTesting
 from plone.app.testing import IntegrationTesting
 from plone.app.testing import PloneSandboxLayer
 from plone.testing import z2
-
-
-IS_PLONE_5 = api.env.plone_version().startswith('5')
-IS_BBB = api.env.plone_version().startswith('4.3')
 
 
 class QIBBB:
