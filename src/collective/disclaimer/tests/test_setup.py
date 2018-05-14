@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """Ensure add-on is properly installed and uninstalled."""
+from collective.disclaimer.config import IS_BBB
 from collective.disclaimer.config import PROJECTNAME
 from collective.disclaimer.interfaces import IBrowserLayer
 from collective.disclaimer.testing import INTEGRATION_TESTING
-from collective.disclaimer.testing import IS_BBB
 from collective.disclaimer.testing import QIBBB
 from plone.browserlayer.utils import registered_layers
 

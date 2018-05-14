@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from collective.disclaimer import _
+from collective.disclaimer.config import IS_BBB
 from plone import api
-from plone.app.z3cform.wysiwyg import WysiwygFieldWidget
 from plone.autoform import directives as form
 from plone.supermodel import model
 from time import time
@@ -45,7 +45,12 @@ class IDisclaimerSettings(model.Schema):
     # XXX: we must use Text instead of RichText as we can only store
     #      primitive Python data types in plone.app.registry
     #      see: https://community.plone.org/t/1240
-    form.widget('text', WysiwygFieldWidget)
+    if IS_BBB:
+        # BBB: remove on deprecation of Plone 4.3
+        from plone.app.z3cform.wysiwyg import WysiwygFieldWidget
+        form.widget('text', WysiwygFieldWidget)
+    else:
+        form.widget('text', klass='pat-tinymce')
     text = schema.Text(
         title=_(u'title_text', default=u'Body text'),
         description=_(u'help_text', default=u'The text of the disclaimer.'),
