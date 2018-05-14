@@ -3,7 +3,7 @@ from setuptools import find_packages
 from setuptools import setup
 
 
-version = '1.0a1.dev0'
+version = '1.0a1'
 description = 'Show a disclaimer the first time a user visits a site.'
 long_description = (
     open('README.rst').read() + '\n' +
