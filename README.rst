@@ -57,9 +57,30 @@ Check the box next to 'Disclaimer' and click the 'Activate' button.
 Usage
 -----
 
-TBD.
+After installing the package,
+go to the 'Disclaimer' configlet on 'Site Setup' and enable the feature.
+
+.. figure:: https://raw.github.com/collective/disclaimer/master/configlet.png
+    :align: center
+    :height: 900px
+    :width: 800px
+
+    The Disclaimer control panel configlet.
+
+Now, the first time a user visits the site the disclaimer will be shown at the bottom of the page.
+
+.. figure:: https://raw.github.com/collective/disclaimer/master/viewlet.png
+    :align: center
+    :height: 600px
+    :width: 800px
+
+    The Disclaimer viewlet at work.
+
+Users will see the disclaimer again whenever information in the configlet is updated.
 
 How Does It Work?
 -----------------
 
-TBD.
+This package registers a new viewlet on ``plone.portalfooter`` viewlet manager.
+The viewlet is normally hidden and it will only be shown after checking the user hasn't seen it yet.
+The information on last time the viewlet was updated is stored in the user's browser local storage.
