@@ -40,7 +40,9 @@ a.disclaimer-close, a.disclaimer-close:hover {
     padding-bottom: 0;
     text-align: left;
 }
-#viewlet-disclaimer p a:link {
+#viewlet-disclaimer p a:link,
+#viewlet-disclaimer p a:visited,
+#viewlet-disclaimer p a:hover {
     color: #fff;
     text-decoration: underline;
 }
