@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-05-09 22:16+0000\n"
-"PO-Revision-Date: 2018-05-09 19:17-0300\n"
+"POT-Creation-Date: 2018-05-16 17:13+0000\n"
+"PO-Revision-Date: 2018-05-16 14:14-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,10 +16,6 @@ msgstr ""
 "Language: es\n"
 "X-Generator: Poedit 1.8.7.1\n"
 
-#: collective/disclaimer/interfaces.py:13
-msgid "<p>We use cookies for statistical purposes, to make the ads you see more relevant to you, to help you sign up for our services, or to remember your settings. Check our <a>privacy and cookies policy</a>.</p>"
-msgstr ""
-
 #: collective/disclaimer/browser/controlpanel.py:11
 #: collective/disclaimer/profiles.zcml:14
 #: collective/disclaimer/profiles/default/controlpanel.xml
@@ -31,40 +27,45 @@ msgstr "Aviso"
 msgid "Show a disclaimer the first time a user visits a site."
 msgstr "Muestra un aviso la primera vez que un usuario visita un sitio web."
 
-#: collective/disclaimer/interfaces.py:42
-msgid "Use of cookies"
-msgstr "Uso de cookies"
-
 #: collective/disclaimer/profiles.zcml:21
 msgid "collective.disclaimer: uninstall"
 msgstr "collective.disclaimer: uninstall"
 
+#: collective/disclaimer/interfaces.py:41
+msgid "default_text"
+msgstr "<p>Usamos cookies con propósitos estadísticos, para mostrar anuncios relevantes, para ayudarle a registrarse en nuestros servicios, o para recordar sus configuraciones. Revise nuestras políticas de <a href=\\\"\\\">privacidad y cookies</a>.</p>"
+
+#. Default: "Use of cookies"
+#: collective/disclaimer/interfaces.py:33
+msgid "default_title"
+msgstr "Uso de cookies"
+
 #. Default: "If selected, a disclaimer will be shown the first time a user visits the site."
-#: collective/disclaimer/interfaces.py:30
+#: collective/disclaimer/interfaces.py:50
 msgid "help_enabled"
 msgstr "Si está seleccionado, un aviso será mostrado la primera vez que un usuario visite el sitio web."
 
 #. Default: "The text of the disclaimer."
-#: collective/disclaimer/interfaces.py:51
+#: collective/disclaimer/interfaces.py:76
 msgid "help_text"
 msgstr "El texto del aviso."
 
 #. Default: "A title for the disclaimer."
-#: collective/disclaimer/interfaces.py:38
+#: collective/disclaimer/interfaces.py:58
 msgid "help_title"
 msgstr "El título del aviso."
 
 #. Default: "Enable disclaimer?"
-#: collective/disclaimer/interfaces.py:29
+#: collective/disclaimer/interfaces.py:49
 msgid "title_enabled"
 msgstr "¿Habilitar aviso?"
 
 #. Default: "Body text"
-#: collective/disclaimer/interfaces.py:50
+#: collective/disclaimer/interfaces.py:75
 msgid "title_text"
 msgstr "Cuerpo del texto"
 
 #. Default: "Title"
-#: collective/disclaimer/interfaces.py:37
+#: collective/disclaimer/interfaces.py:57
 msgid "title_title"
 msgstr "Título"

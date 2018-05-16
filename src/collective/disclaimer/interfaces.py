@@ -6,11 +6,15 @@ from plone.autoform import directives as form
 from plone.supermodel import model
 from time import time
 from zope import schema
+from zope.globalrequest import getRequest
+from zope.i18n import translate
 from zope.interface import Interface
 from zope.interface import invariant
+from zope.interface import provider
+from zope.schema.interfaces import IContextAwareDefaultFactory
 
 
-DEFAULT_DISCLAIMER = _(
+DEFAULT_DISCLAIMER = (
     u'<p>We use cookies for statistical purposes, '
     u'to make the ads you see more relevant to you, '
     u'to help you sign up for our services, '
@@ -20,6 +24,22 @@ DEFAULT_DISCLAIMER = _(
 
 class IBrowserLayer(Interface):
     """A layer specific for this add-on product."""
+
+
+@provider(IContextAwareDefaultFactory)
+def default_title(context):
+    # we need to pass the request as translation context
+    return translate(
+        _('default_title', default=u'Use of cookies'),
+        context=getRequest())
+
+
+@provider(IContextAwareDefaultFactory)
+def default_text(context):
+    # we need to pass the request as translation context
+    return translate(
+        _('default_text', default=DEFAULT_DISCLAIMER),
+        context=getRequest())
 
 
 class IDisclaimerSettings(model.Schema):
@@ -37,9 +57,7 @@ class IDisclaimerSettings(model.Schema):
         title=_(u'title_title', default=u'Title'),
         description=_(u'help_title', default=u'A title for the disclaimer.'),
         required=False,
-        # XXX: can't use message id, string isn't being translated
-        #      see: https://community.plone.org/t/6461
-        default=_(u'Use of cookies'),
+        defaultFactory=default_title,
     )
 
     # XXX: we must use Text instead of RichText as we can only store
@@ -55,9 +73,7 @@ class IDisclaimerSettings(model.Schema):
         title=_(u'title_text', default=u'Body text'),
         description=_(u'help_text', default=u'The text of the disclaimer.'),
         required=True,
-        # XXX: can't use message id, string isn't being translated
-        #      see: https://community.plone.org/t/6461
-        default=DEFAULT_DISCLAIMER,
+        defaultFactory=default_text,
     )
 
     last_modified = schema.ASCIILine(

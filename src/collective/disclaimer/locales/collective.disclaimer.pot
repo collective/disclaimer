@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-05-09 22:16+0000\n"
+"POT-Creation-Date: 2018-05-16 17:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,10 +14,6 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: collective/disclaimer/interfaces.py:13
-msgid "<p>We use cookies for statistical purposes, to make the ads you see more relevant to you, to help you sign up for our services, or to remember your settings. Check our <a>privacy and cookies policy</a>.</p>"
-msgstr ""
-
 #: collective/disclaimer/browser/controlpanel.py:11
 #: collective/disclaimer/profiles.zcml:14
 #: collective/disclaimer/profiles/default/controlpanel.xml
@@ -29,40 +25,45 @@ msgstr ""
 msgid "Show a disclaimer the first time a user visits a site."
 msgstr ""
 
-#: collective/disclaimer/interfaces.py:42
-msgid "Use of cookies"
-msgstr ""
-
 #: collective/disclaimer/profiles.zcml:21
 msgid "collective.disclaimer: uninstall"
 msgstr ""
 
+#: collective/disclaimer/interfaces.py:41
+msgid "default_text"
+msgstr ""
+
+#. Default: "Use of cookies"
+#: collective/disclaimer/interfaces.py:33
+msgid "default_title"
+msgstr ""
+
 #. Default: "If selected, a disclaimer will be shown the first time a user visits the site."
-#: collective/disclaimer/interfaces.py:30
+#: collective/disclaimer/interfaces.py:50
 msgid "help_enabled"
 msgstr ""
 
 #. Default: "The text of the disclaimer."
-#: collective/disclaimer/interfaces.py:51
+#: collective/disclaimer/interfaces.py:76
 msgid "help_text"
 msgstr ""
 
 #. Default: "A title for the disclaimer."
-#: collective/disclaimer/interfaces.py:38
+#: collective/disclaimer/interfaces.py:58
 msgid "help_title"
 msgstr ""
 
 #. Default: "Enable disclaimer?"
-#: collective/disclaimer/interfaces.py:29
+#: collective/disclaimer/interfaces.py:49
 msgid "title_enabled"
 msgstr ""
 
 #. Default: "Body text"
-#: collective/disclaimer/interfaces.py:50
+#: collective/disclaimer/interfaces.py:75
 msgid "title_text"
 msgstr ""
 
 #. Default: "Title"
-#: collective/disclaimer/interfaces.py:37
+#: collective/disclaimer/interfaces.py:57
 msgid "title_title"
 msgstr ""
