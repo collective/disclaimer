@@ -4,7 +4,8 @@ Changelog
 1.0b1 (unreleased)
 ------------------
 
-- Define color for hover and visited links [agnogueira].
+- Fix style of hover and visited links inside disclaimer viewlet.
+  [agnogueira]
 
 
 1.0a1 (2018-05-14)
