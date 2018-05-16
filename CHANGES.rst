@@ -4,6 +4,9 @@ Changelog
 1.0b1 (unreleased)
 ------------------
 
+- Fix translation of default values on configlet (HT @fredvd).
+  [hvelarde]
+
 - Fix style of hover and visited links inside disclaimer viewlet.
   [agnogueira]
 
