@@ -1,15 +1,18 @@
 <div id="viewlet-disclaimer" role="alert" style="display: none"
     tal:attributes="data-enabled view/enabled;
                     data-last-modified view/last_modified">
-
   <link href="disclaimer.css" rel="stylesheet" tal:attributes="href string:${view/site_url}/++resource++collective.disclaimer/disclaimer.css">
 
-  <div class="disclaimer-title" tal:content="view/title">Title</div>
-  <div class="disclaimer-text" tal:content="structure view/text">
-    Disclaimer
+  <div class="disclaimer-inner">
+
+    <div class="disclaimer-title" tal:content="view/title">Title</div>
+    <div class="disclaimer-text" tal:content="structure view/text">
+      Disclaimer
+    </div>
+    <button name="collective.disclaimer.ok" i18n:translate="title_button_ok">OK</button>
+    <button name="collective.disclaimer.cancel" i18n:translate="title_button_cancel">Cancel</button>
+
   </div>
-  <button name="collective.disclaimer.ok" i18n:translate="title_button_ok">OK</button>
-  <button name="collective.disclaimer.cancel" i18n:translate="title_button_cancel">Cancel</button>
 
   <script>
   if (Storage !== undefined) {

@@ -4,6 +4,9 @@ Changelog
 1.0b1 (unreleased)
 ------------------
 
+- Add a ``disclaimer-inner`` wrapper to allow easier styling, e.g. positioning the viewlet centered on the website and darkening the whole background.
+  [thet]
+
 -  Move styles and scripts into the viewlet, so that they are included when using Diazo and just using the viewlet selector to copy the viewlet into the theme.
   [thet]
 
