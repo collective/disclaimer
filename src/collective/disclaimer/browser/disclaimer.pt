@@ -1,43 +1,45 @@
-<link href="disclaimer.css" rel="stylesheet" tal:attributes="href string:${view/site_url}/++resource++collective.disclaimer/disclaimer.css">
-
 <div id="viewlet-disclaimer" role="alert" style="display: none"
     tal:attributes="data-enabled view/enabled;
                     data-last-modified view/last_modified">
+
+  <link href="disclaimer.css" rel="stylesheet" tal:attributes="href string:${view/site_url}/++resource++collective.disclaimer/disclaimer.css">
+
   <div class="disclaimer-title" tal:content="view/title">Title</div>
-  <div tal:replace="structure view/text">
+  <div class="disclaimer-text" tal:content="structure view/text">
     Disclaimer
   </div>
   <button name="collective.disclaimer.ok" i18n:translate="title_button_ok">OK</button>
   <button name="collective.disclaimer.cancel" i18n:translate="title_button_cancel">Cancel</button>
+
+  <script>
+  if (Storage !== undefined) {
+    $(document).ready(function () {
+      'use strict';
+
+      var enabled = $('#viewlet-disclaimer').attr('data-enabled');
+      if (enabled !== 'true') {
+        return;
+      }
+
+      var last_modified = $('#viewlet-disclaimer').attr('data-last-modified');
+      var last_seen = localStorage.getItem('collective.disclaimer');
+      if (last_seen === null || last_seen < last_modified) {
+        $('#viewlet-disclaimer').show();
+      }
+
+      $('button[name="collective.disclaimer.ok"]').click(function (event) {
+        event.preventDefault();
+        localStorage.setItem('collective.disclaimer', last_modified);
+        $("#viewlet-disclaimer").hide();
+      });
+
+      $('button[name="collective.disclaimer.cancel"]').click(function (event) {
+        event.preventDefault();
+        $("#viewlet-disclaimer").hide();
+      });
+
+    });
+  }
+  </script>
+
 </div>
-
-<script>
-if (Storage !== undefined) {
-  $(document).ready(function () {
-    'use strict';
-
-    var enabled = $('#viewlet-disclaimer').attr('data-enabled');
-    if (enabled !== 'true') {
-      return;
-    }
-
-    var last_modified = $('#viewlet-disclaimer').attr('data-last-modified');
-    var last_seen = localStorage.getItem('collective.disclaimer');
-    if (last_seen === null || last_seen < last_modified) {
-      $('#viewlet-disclaimer').show();
-    }
-
-    $('button[name="collective.disclaimer.ok"]').click(function (event) {
-      event.preventDefault();
-      localStorage.setItem('collective.disclaimer', last_modified);
-      $("#viewlet-disclaimer").hide();
-    });
-
-    $('button[name="collective.disclaimer.cancel"]').click(function (event) {
-      event.preventDefault();
-      $("#viewlet-disclaimer").hide();
-    });
-
-  });
-}
-</script>
