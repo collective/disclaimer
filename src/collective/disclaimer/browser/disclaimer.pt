@@ -10,7 +10,6 @@
       Disclaimer
     </div>
     <button name="collective.disclaimer.ok" i18n:translate="title_button_ok">OK</button>
-    <button name="collective.disclaimer.cancel" i18n:translate="title_button_cancel">Cancel</button>
 
   </div>
 
@@ -33,11 +32,6 @@
       $('button[name="collective.disclaimer.ok"]').click(function (event) {
         event.preventDefault();
         localStorage.setItem('collective.disclaimer', last_modified);
-        $("#viewlet-disclaimer").hide();
-      });
-
-      $('button[name="collective.disclaimer.cancel"]').click(function (event) {
-        event.preventDefault();
         $("#viewlet-disclaimer").hide();
       });
 
