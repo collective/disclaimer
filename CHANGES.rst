@@ -4,6 +4,11 @@ Changelog
 1.0b1 (unreleased)
 ------------------
 
+- Register the controlpanel for any context.
+  The correct registry is automatically acquired.
+  This way, it's possible to set different disclaimer texts in a Lineage site with lineage.registry installed.
+  [thet]
+
 - Add a ``disclaimer-inner`` wrapper to allow easier styling, e.g. positioning the viewlet centered on the website and darkening the whole background.
   [thet]
 
