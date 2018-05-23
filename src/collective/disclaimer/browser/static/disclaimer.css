@@ -19,15 +19,15 @@
 }
 button[name="collective.disclaimer.ok"] {
     display: inline-block;
-    margin: 0 0 0 1em;
+    margin: 1em;
     padding: 0.5em;
+    border-radius: 0.2em;
     background: #00FF00;
     color: black;
-    border-radius: 0.2em;
-    opacity: 0.7;
+    border: none;
 }
 button[name="collective.disclaimer.ok"]:hover {
-    opacity: 1;
+    color: white;
 }
 .disclaimer-title {
     font-weight: bold;
