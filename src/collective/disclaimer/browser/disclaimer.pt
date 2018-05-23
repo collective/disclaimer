@@ -16,22 +16,22 @@
   <script>
   if (Storage !== undefined) {
     $(document).ready(function () {
-      'use strict';
+      "use strict";
 
-      var enabled = $('#viewlet-disclaimer').attr('data-enabled');
-      if (enabled !== 'true') {
+      var enabled = $("#viewlet-disclaimer").attr("data-enabled");
+      if (enabled !== "true") {
         return;
       }
 
-      var last_modified = $('#viewlet-disclaimer').attr('data-last-modified');
-      var last_seen = localStorage.getItem('collective.disclaimer');
+      var last_modified = $("#viewlet-disclaimer").attr("data-last-modified");
+      var last_seen = localStorage.getItem("collective.disclaimer");
       if (last_seen === null || last_seen < last_modified) {
-        $('#viewlet-disclaimer').show();
+        $("#viewlet-disclaimer").show();
       }
 
-      $('button[name="collective.disclaimer.ok"]').click(function (event) {
+      $("button[name='collective.disclaimer.ok']").click(function (event) {
         event.preventDefault();
-        localStorage.setItem('collective.disclaimer', last_modified);
+        localStorage.setItem("collective.disclaimer", last_modified);
         $("#viewlet-disclaimer").hide();
       });
 
