@@ -14,22 +14,20 @@
     width: 100%;
     z-index: 20180509;
 }
-a.disclaimer-close, a.disclaimer-close:hover {
-    background: #fff;
-    border-radius: 50%;
-    color: #000 !important;
-    cursor: pointer;
+.disclaimer-text {
     display: inline-block;
-    float: right;
-    font-size: 13px;
-    line-height: 18px;
-    height: 17px;
-    position: absolute;
-    right: 0.5em;
-    text-align: center;
-    text-decoration: none;
-    top: 0.5em;
-    width: 17px;
+}
+button[name="collective.disclaimer.ok"] {
+    display: inline-block;
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 0.2em;
+    background: #00FF00;
+    color: black;
+    border: none;
+}
+button[name="collective.disclaimer.ok"]:hover {
+    color: white;
 }
 .disclaimer-title {
     font-weight: bold;

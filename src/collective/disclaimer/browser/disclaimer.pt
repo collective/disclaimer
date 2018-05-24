@@ -1,36 +1,42 @@
-<link href="disclaimer.css" rel="stylesheet"
-    tal:attributes="href string:${view/site_url}/++resource++collective.disclaimer/disclaimer.css">
-
 <div id="viewlet-disclaimer" role="alert" style="display: none"
     tal:attributes="data-enabled view/enabled;
                     data-last-modified view/last_modified">
-  <a class="disclaimer-close" title="Close">X</a>
-  <div class="disclaimer-title" tal:content="view/title">Title</div>
-  <div tal:replace="structure view/text">
-    Disclaimer
+  <link href="disclaimer.css" rel="stylesheet" tal:attributes="href string:${view/site_url}/++resource++collective.disclaimer/disclaimer.css">
+
+  <div class="disclaimer-inner">
+
+    <div class="disclaimer-title" tal:content="view/title">Title</div>
+    <div class="disclaimer-text" tal:content="structure view/text">
+      Disclaimer
+    </div>
+    <button name="collective.disclaimer.ok" i18n:translate="title_button_ok">OK</button>
+
   </div>
-</div>
 
-<script>
-if (Storage !== undefined) {
-  $(document).ready(function () {
-    "use strict";
-    var last_modified = $("#viewlet-disclaimer").attr("data-last-modified");
-    var last_seen = localStorage.getItem("collective.disclaimer");
+  <script>
+  if (Storage !== undefined) {
+    $(document).ready(function () {
+      "use strict";
 
-    if (last_seen === null || last_seen < last_modified) {
-      localStorage.setItem("collective.disclaimer", last_modified);
       var enabled = $("#viewlet-disclaimer").attr("data-enabled");
+      if (enabled !== "true") {
+        return;
+      }
 
-      if (enabled === "true") {
+      var last_modified = $("#viewlet-disclaimer").attr("data-last-modified");
+      var last_seen = localStorage.getItem("collective.disclaimer");
+      if (last_seen === null || last_seen < last_modified) {
         $("#viewlet-disclaimer").show();
       }
 
-      $(".disclaimer-close").click(function (event) {
+      $("button[name='collective.disclaimer.ok']").click(function (event) {
         event.preventDefault();
+        localStorage.setItem("collective.disclaimer", last_modified);
         $("#viewlet-disclaimer").hide();
       });
-    }
-  });
-}
-</script>
+
+    });
+  }
+  </script>
+
+</div>

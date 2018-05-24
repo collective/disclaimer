@@ -11,7 +11,7 @@
 
   <browser:page
       class=".controlpanel.DisclaimerSettingsControlPanel"
-      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      for="*"
       layer="collective.disclaimer.interfaces.IBrowserLayer"
       name="disclaimer-settings"
       permission="collective.disclaimer.Setup"
