@@ -32,5 +32,10 @@ after_success:
 - bin/createcoverage --output-dir=htmlcov
 - pip install coveralls
 - coveralls
+- pip install coverage
+- coverage help
+- coverage xml run bin/test
+- pip install codacy-coverage
+- python-codacy-coverage -r coverage.xml
 notifications:
   irc: irc.freenode.org#plone-testing
