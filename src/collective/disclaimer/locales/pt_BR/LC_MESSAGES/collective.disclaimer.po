@@ -33,7 +33,7 @@ msgstr "collective.disclaimer: uninstall"
 
 #: collective/disclaimer/interfaces.py:41
 msgid "default_text"
-msgstr "<p>Usamos cookies com propósitos estadísticos, para mostrar anúncios relevantes, para lhe ajudar a se registrar em nossos serviços, o para lembrar suas configurações. Revise nossas políticas de <a href=\\\"\\\">privacidade e cookies</a>.</p>"
+msgstr "<p>Usamos cookies com propósitos estatísticos, para mostrar anúncios relevantes, para lhe ajudar a se registrar em nossos serviços, o para lembrar suas configurações. Revise nossas políticas de <a href=\\\"\\\">privacidade e cookies</a>.</p>"
 
 #. Default: "Use of cookies"
 #: collective/disclaimer/interfaces.py:33
