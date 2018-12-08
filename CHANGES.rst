@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0b1 (unreleased)
+1.0b1 (2018-12-08)
 ------------------
 
 - Register the controlpanel for any context.
